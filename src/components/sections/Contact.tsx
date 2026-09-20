@@ -1,4 +1,4 @@
-import { Globe, User, Mail, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
