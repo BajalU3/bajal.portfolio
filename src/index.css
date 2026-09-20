@@ -19,7 +19,18 @@ body {
   color: #e2e8f0;
   font-family: var(--font-sans);
   overflow-x: hidden;
-  cursor: none; /* For custom magnetic cursor */
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none; /* For custom magnetic cursor */
+  }
+}
+
+@media (pointer: coarse), (hover: none) {
+  .custom-cursor-element {
+    display: none !important;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
