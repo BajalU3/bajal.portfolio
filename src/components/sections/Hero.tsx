@@ -40,7 +40,7 @@ export const Hero = () => {
           >
             <div className="absolute inset-0 rounded-full shadow-[0_0_30px_rgba(0,240,255,0.4)] animate-pulse group-hover:shadow-[0_0_50px_rgba(0,240,255,0.6)] transition-shadow duration-300" />
             <img
-              src="/profile.jpg"
+              src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Bajal U"
               className="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500"
             />
@@ -107,7 +107,7 @@ export const Hero = () => {
               className="relative max-w-xl w-full aspect-square rounded-3xl overflow-hidden p-1 bg-gradient-to-br from-primary/50 to-secondary/50 shadow-[0_0_50px_rgba(0,240,255,0.3)]"
             >
               <img
-                src="/profile.jpg"
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt="Bajal U"
                 className="w-full h-full object-cover rounded-[22px]"
               />

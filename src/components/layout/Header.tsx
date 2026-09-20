@@ -25,7 +25,7 @@ export const Header = () => {
 
       <div className="relative z-10 flex items-center">
         <a 
-          href="/resume.pdf" 
+          href={`${import.meta.env.BASE_URL}resume.pdf`} 
           download="Bajal_U_Resume.pdf"
           className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors border border-white/10"
         >
