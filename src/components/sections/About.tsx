@@ -16,15 +16,18 @@ export const About = () => {
       if (words) {
         gsap.fromTo(
           words,
-          { color: 'rgba(255, 255, 255, 0.1)' },
+          { color: 'rgba(255, 255, 255, 0.1)', opacity: 0, y: 20 },
           {
             color: 'rgba(255, 255, 255, 1)',
-            stagger: 0.1,
+            opacity: 1,
+            y: 0,
+            stagger: 0.02,
+            duration: 0.8,
+            ease: 'power2.out',
             scrollTrigger: {
-              trigger: sectionRef.current,
-              start: 'top 70%',
-              end: 'bottom 40%',
-              scrub: true,
+              trigger: textRef.current,
+              start: 'top 80%',
+              toggleActions: 'play none none reverse'
             },
           }
         );
@@ -37,11 +40,11 @@ export const About = () => {
   const paragraph = "I am Bajal U, a Software Developer and Co-Founder of NexCreo. Over the past seven years, I have specialized in architecting cross-platform mobile applications using React Native and building dynamic, full-stack ecosystems. Great software is invisible; it simply empowers the user.";
 
   return (
-    <section ref={sectionRef} className="py-32 px-4 md:px-12 lg:px-24 min-h-screen flex flex-col justify-center">
+    <section ref={sectionRef} className="py-20 md:py-32 px-4 md:px-12 lg:px-24 min-h-screen flex flex-col justify-center">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-sm uppercase tracking-[0.3em] text-primary mb-12">About & Philosophy</h2>
 
-        <div ref={textRef} className="text-3xl md:text-5xl lg:text-6xl font-medium leading-[1.3] tracking-tight mb-24">
+        <div ref={textRef} className="text-2xl md:text-5xl lg:text-6xl font-medium leading-[1.3] tracking-tight mb-16 md:mb-24">
           {paragraph.split(' ').map((word, i) => {
             const isHighlight = ['NexCreo.', 'architecting', 'cross-platform', 'full-stack', 'invisible;'].includes(word);
             return (
